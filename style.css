@@ -1,0 +1,211 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 1500px;
+}
+/* Navbar pc*/
+header{
+    width: 100%;
+    background-color: #333;
+}
+.nav__pc{
+    display: flex;
+    list-style: none;
+    padding: 15px 20px;
+}
+.nav__pc-item{
+    margin-right: 15px;
+}
+.nav__pc-link{
+    text-decoration: none;
+    color: white;
+}
+.nav__pc-bars i{
+    cursor: pointer;
+}
+.nav__pc-bars{
+    font-size: 18px;
+    color: white;
+    padding: 10px 20px;
+    display: none;
+}
+/* Navbar mobile */
+.nav__mobile{
+    position: fixed;
+    width: 40%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: white;
+    z-index: 2;
+    transition: .4s ease-in-out;
+    transform: translateX(-100%);
+}
+.nav__mobile-list{
+    list-style: none;
+}
+.nav__mobile-item{
+    padding: 10px 20px;
+    margin-bottom: 5px;
+    background-color: rgba(0, 0, 0, 0.03);
+}
+.nav__mobile-link{
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+.nav__mobile-close-btn i{
+    cursor: pointer;
+}
+.nav__mobile-close-btn{
+    text-align: end;
+    font-size: 20px;
+    padding: 10px 20px;
+}
+
+/* Overlay */
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    display: none;
+}
+
+/* Animation */
+@keyframes FaceIn {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+/* Xử lý khi click vào navbar  */
+.nav__input:checked ~ .nav__mobile{
+    transform: translateX(0%);
+    animation: FaceIn 0.2s linear;
+}
+.nav__input:checked ~ .overlay{
+    display: block;
+    animation: FaceIn 0.2s linear;
+}
+.nav__input:checked ~ .product .product__info .product__btn{
+    display: none;
+}
+
+/* Content */
+.pc,.mobile,.tablet{
+    font-size: 50px;
+    text-align: center;
+    display: none;
+}
+
+/* Product */
+.product{
+    display: flex;
+    padding: 20px;
+}
+.product__img{
+    width: 40%;
+    /* height: 350px; */
+}
+.product__img img{
+    width: 100%;
+    height: 100%;
+}
+.product__info{
+    width: 60%;
+    margin-left: 10px;
+}
+.product__name{
+    color: crimson;
+}
+.product__price{
+    font-weight: 600;
+    color: crimson;
+    font-size: 20px;
+    margin-top: 10px;   
+}
+.product__desc{
+    margin-top: 10px;
+    color: gray;
+}
+.product__buy-btn{
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px dotted;
+    display: inline-block;
+    background-color: brown;
+    cursor: pointer;
+}
+.product__add_cart-btn{
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px dotted;
+    display: inline-block;
+    background-color: green;
+    cursor: pointer;
+}
+.product__buy-btn a, .product__add_cart-btn a{
+    text-decoration: none;
+    color: white;
+}
+
+/* Responsive */
+
+/* Mobile and Tablet */
+@media (max-width: 1023px) {
+    .product{
+        flex-direction: column-reverse;
+    }
+    .product__img{
+        width: 100%;
+        /* height: 500px; */
+        margin: 10px 0px;
+    }
+    .product__info{
+        margin: 0px;
+    }
+    .product__desc{
+        display: none;
+    }
+    .product__btn{
+        position: fixed;
+        bottom: 0;
+        z-index: 1;
+    }
+    .nav__pc{
+        display: none;
+    }
+    .nav__pc-bars{
+        display: block;
+    }
+}
+/* Mobile */
+@media (max-width: 739px) {
+    .mobile{
+        display: block;
+    }
+    .nav__mobile{
+        width: 60%;
+    }
+}
+/* Tablet */
+@media (max-width: 1023px) and (min-width: 740px) {
+    .tablet{
+        display: block;
+    }    
+}
+/* PC */
+@media (min-width: 1024px) {
+    .pc{
+        display: block;
+    }
+}

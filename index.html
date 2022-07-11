@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive F8</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+</head>
+
+<body>
+    <header>
+        <ul class="nav__pc">
+            <li class="nav__pc-item">
+                <a class="nav__pc-link" href="">Trang chủ</a>
+            </li>
+            <li class="nav__pc-item">
+                <a class="nav__pc-link" href="">Giới thiệu</a>
+            </li>
+            <li class="nav__pc-item">
+                <a class="nav__pc-link" href="">Sản phẩm</a>
+            </li>
+            <li class="nav__pc-item">
+                <a class="nav__pc-link" href="">Khóa học</a>
+            </li>
+        </ul>
+
+        <div class="nav__pc-bars">
+            <label for="nav__pc-input">
+                <i class="fas fa-bars"></i>
+            </label>
+        </div>
+    </header>
+
+    <input type="checkbox" hidden class="nav__input" id="nav__pc-input" />
+
+    <label for="nav__pc-input" class="overlay"></label>
+
+    <div class="nav__mobile">
+        <div class="nav__mobile-close-btn">
+            <label for="nav__pc-input">
+                <i class="fas fa-times"></i>
+            </label>
+        </div>
+
+        <ul class="nav__mobile-list">
+            <li class="nav__mobile-item">
+                <a class="nav__mobile-link" href="">Trang chủ</a>
+            </li>
+            <li class="nav__mobile-item">
+                <a class="nav__mobile-link" href="">Giới thiệu</a>
+            </li>
+            <li class="nav__mobile-item">
+                <a class="nav__mobile-link" href="">Sản phẩm</a>
+            </li>
+            <li class="nav__mobile-item">
+                <a class="nav__mobile-link" href="">Khóa học</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="product">
+        <div class="product__img">
+            <img src="https://f8.vercel.app/_next/static/media/f8-og-image.0fa4d878.jpg" alt="" />
+        </div>
+        <div class="product__info">
+            <div class="product__name">
+                <h2>Khóa học tại F8 Fullstack</h2>
+            </div>
+            <div class="product__price">
+                <p>1.000.000 đ</p>
+            </div>
+            <div class="product__desc">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci
+                quod asperiores quam voluptate voluptatibus assumenda nisi optio ex
+                doloremque necessitatibus, animi eius fuga temporibus, vero
+                similique accusantium cumque? Adipisci, nihil. Lorem ipsum dolor sit
+                amet consectetur adipisicing elit. Qui omnis amet tenetur
+                voluptatibus ullam. Mollitia quibusdam, a earum voluptates suscipit
+                ducimus. Delectus expedita voluptates nihil, placeat sequi dolorem.
+                Quo, delectus.
+            </div>
+            <div class="product__btn">
+                <div class="product__buy-btn">
+                    <a href="">Mua ngay</a>
+                </div>
+                <div class="product__add_cart-btn">
+                    <a href="">Thêm vào giỏ</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="mobile">Mobile</div>
+        <div class="pc">PC</div>
+        <div class="tablet">Tablet</div>
+    </div>
+</body>
+
+</html>
